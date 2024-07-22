@@ -1,0 +1,644 @@
+ :root {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     --mainColor: #09090b;
+     --secondColor: #85858a;
+     --cardColor: #151515;
+     --fontMain: #ddd;
+     --movColor: rgb(111, 112, 165);
+ }
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     font-family: "Work Sans", sans-serif;
+     background-color: var(--mainColor);
+     color: var(--secondColor);
+
+
+ }
+
+ h2 {
+     position: absolute;
+     color: var(--movColor);
+ }
+
+ .main-container {
+     padding-left: 20px;
+     padding-right: 20px;
+     margin-left: auto;
+     margin-right: auto;
+
+
+ }
+
+ .container {
+     display: flex;
+     justify-content: center;
+ }
+
+
+
+ .div-nav {
+     display: grid;
+     grid-template-columns: 1fr 4fr;
+     width: 70%;
+
+ }
+
+
+
+ .head {
+     position: relative;
+ }
+
+ .head::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: 0;
+     width: 0.1ex;
+     background-color: #8080805e;
+     height: 100%;
+
+ }
+
+ .head .sidebar {
+     position: sticky;
+     top: 0;
+     left: 0;
+     padding-top: 30px;
+     padding-right: 10px;
+     width: 300px;
+ }
+
+ .sidebar .nav-info {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--cardColor);
+     border-radius: 5px;
+     width: 100%;
+
+ }
+
+ .sidebar .mydata {
+     display: flex;
+     align-items: center;
+     padding: 10px;
+     border-radius: 5px;
+
+ }
+
+ .sidebar img {
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+     margin-right: 10px;
+
+ }
+
+ .sidebar .nav-info i {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid var(--secondColor);
+     border-radius: 50%;
+     height: 30px;
+     width: 30px;
+     color: var(--secondColor);
+     cursor: pointer;
+     margin-right: 10px;
+     transition: 1s;
+
+ }
+
+ .sidebar .nav-info i.animate {
+     animation: name;
+     animation-duration: 0.5s;
+     animation-timing-function: linear;
+     animation-fill-mode: forwards;
+ }
+
+ .sidebar .nav-info .fa-bars {
+     display: none;
+ }
+
+
+ @keyframes name {
+     0% {
+         rotate: 180deg;
+     }
+
+     100% {
+         rotate: 360deg;
+     }
+
+ }
+
+
+ .sidebar .nav-title {
+     line-height: 0;
+
+ }
+
+ .nav-title .s {
+     font-weight: 500;
+     color: var(--fontMain);
+
+ }
+
+ .nav-title .x {
+     color: var(--secondColor);
+     font-size: 10px;
+     font-weight: 700;
+ }
+
+
+ .nav-menu {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     padding-top: 20px;
+     margin-right: 5px;
+     font-size: 15px;
+
+ }
+
+ .list-menu i {
+     padding-right: 20px;
+     font-size: 0.8rem;
+     transition: 0.1s;
+ }
+
+ .list-menu a {
+     display: flex;
+     text-decoration: none;
+     font-size: 15px;
+     color: var(--secondColor);
+     font-weight: 600;
+     padding: 10px;
+     transition: 0.5s;
+ }
+
+ .list-menu i:hover,
+ .list-menu a:hover {
+     background-color: var(--cardColor);
+     color: var(--fontMain);
+     border-radius: 5px;
+     transform: scale(1.05);
+ }
+
+ .custom-hr {
+     align-self: start;
+     border: 0;
+     height: 0.1ex;
+     background-color: var(--secondColor);
+     width: 90%;
+     margin: 20px;
+
+ }
+
+
+ .contact-icon a {
+     text-decoration: none;
+     color: var(--secondColor);
+ }
+
+ .contact-icon span {
+     font-size: 20px;
+     color: var(--secondColor);
+     padding: 5px;
+
+ }
+
+ .contact-icon {
+     display: flex;
+     align-items: center;
+     padding: 5px;
+ }
+
+ .active {
+     color: red;
+     background-color: var(--cardColor);
+ }
+
+ /* .................................................... */
+ /* Section 1 */
+ /* .................................................... */
+ section {
+     margin: 20px;
+     width: 100%;
+
+ }
+
+
+ /* Content */
+ section .content {
+     padding: 40px;
+     margin: 10px;
+     border-radius: 5px;
+     background-color: var(--cardColor);
+ }
+
+ section h1 {
+     color: var(--movColor);
+     padding: 20px;
+
+ }
+
+
+ .titles {
+     /* border-bottom: 1px solid var(--secondColor); */
+     margin-bottom: 30px;
+     width: 90%;
+ }
+
+ section p {
+     padding-left: 20px;
+     word-wrap: break-word;
+ }
+
+
+
+
+ .learn {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+
+ }
+
+
+ .learn i {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid var(--secondColor);
+     border-radius: 50%;
+     height: 30px;
+     width: 30px;
+     color: var(--secondColor);
+     cursor: pointer;
+     margin-right: 10px;
+     animation: identifier 4s linear infinite;
+ }
+
+ @keyframes identifier {
+     from {
+         transform: rotate(0deg);
+     }
+
+     to {
+         transform: rotate(360deg);
+     }
+ }
+
+ .learn .border {
+     border-left: 1px solid var(--secondColor);
+     height: 30px;
+     width: 10px;
+ }
+
+ .learn .border-2 {
+     border-top: 0.1ex solid var(--secondColor);
+     height: 30px;
+     width: 100%;
+ }
+
+ .learn-content {
+     display: flex;
+     justify-content: space-between;
+
+ }
+
+ .learn-content p {
+     border: 1px solid var(--secondColor);
+     padding: 0;
+
+ }
+
+ .cards-content {
+     display: flex;
+     flex-direction: column;
+     border-radius: 10px;
+     margin-bottom: 30px;
+ }
+
+ .cards-content h2 {
+     color: var(--movColor);
+
+ }
+
+ .cards-content .cards {
+     display: grid;
+     grid-template-columns: 2fr 2fr;
+     grid-template-rows: 2fr 2fr;
+     border-radius: 10px;
+     color: var(--movColor);
+
+ }
+
+ .cards-content .card {
+     padding: 10px;
+     margin: 5px;
+     border: 1px solid #85858a;
+     border-radius: 10px;
+     transition: 0.2s;
+ }
+
+
+ .cards-content .card:hover {
+     /* transform: scale(1.02); */
+     background-color: var(--mainColor);
+ }
+
+ .cards-content .text {
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding: 0;
+ }
+
+ /* 
+ .cards-content.card .span {
+     color: white;
+     padding-left: 20px;
+     align-items: start;
+
+
+ } */
+
+ .cards-content .text i {
+     font-size: 30px;
+ }
+
+ .cards-content .text i::after {
+     content: "";
+     margin: 10px;
+     border-right: 1px solid var(--secondColor);
+ }
+
+ .cards-content .text .title {
+     margin: 0;
+     padding-left: 0;
+     padding-bottom: 5px;
+     font-size: 20px;
+     font-weight: 500;
+     color: var(--fontMain);
+ }
+
+ .cards-content .text .title-content {
+     margin: 0;
+     padding: 0;
+     font-size: 15px;
+     color: var(--secondColor);
+     max-width: 300px;
+ }
+
+ .content img {
+     height: 40px;
+     width: 40px;
+
+ }
+
+
+ .skills {
+     padding: 20px;
+
+ }
+
+ .skills .skills-icon {
+     display: flex;
+     justify-content: space-around;
+     margin-bottom: 20px;
+ }
+
+
+
+
+
+ .nn .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 30px;
+ }
+
+ .nn .prev {
+
+     align-content: center;
+     text-align: center;
+     left: 280px;
+     margin: 10px;
+     height: 30px;
+     width: 30px;
+     background-color: #151515;
+     border-radius: 50%;
+     cursor: pointer;
+     font-size: 15px;
+
+ }
+
+ .nn .next {
+
+     align-content: center;
+     text-align: center;
+     right: 280px;
+     margin: 10px;
+     height: 30px;
+     width: 30px;
+     background-color: #151515;
+     border-radius: 50%;
+     cursor: pointer;
+     font-size: 15px;
+
+ }
+
+ .nn i:hover {
+     background-color: #333;
+ }
+
+
+ .cc {
+     position: relative;
+     height: 300px;
+     width: 80%;
+     overflow: hidden;
+     border: 1px solid #5a5b5a;
+     border-radius: 10px;
+
+ }
+
+ .cc .slide {
+     position: absolute;
+     transition: 1s;
+     width: 100%;
+     height: 100%;
+     padding: 5px;
+     box-sizing: border-box;
+
+ }
+
+ .cc img {
+     border-radius: 10px;
+ }
+
+.edu {
+    position: relative;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+    /* margin-bottom: 10px; */
+    line-height: 1;
+}
+ /* ......About........ */
+
+ /* #about h3::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+} */
+
+ /* @keyframes mavin {
+     0% {
+         transform: translateX(100%);
+     }
+
+
+     100% {
+         transform: translateX(-100%);
+     }
+ } */
+
+
+
+
+ /* ................... @media Screen....................... */
+ @media(max-width:1500px) {
+     .div-nav {
+         display: grid;
+         grid-template-columns: 1fr 3fr;
+         width: 100%;
+
+     }
+ }
+
+ @media(max-width:992px) {
+
+     .main-container {
+         padding-left: 0;
+         padding-right: 0;
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+     .container {
+         padding-left: 0;
+         padding-right: 0;
+         margin-left: 0;
+         margin-right: 0;
+         width: 100%;
+
+     }
+
+     .head {
+         position: sticky;
+         top: 0;
+         margin-left: 10px;
+         margin-right: 10px;
+         z-index: 1;
+
+     }
+
+     .head::after {
+         position: relative;
+     }
+
+     .div-nav {
+         display: block;
+         position: relative;
+         width: 100%;
+     }
+
+     .head .sidebar {
+         padding-top: 0;
+         padding-right: 0;
+         width: 100%;
+     }
+
+     .sidebar .nav-info {
+         position: relative;
+         background-color: var(--cardColor);
+         /* border: 1px solid #5c5c5f38; */
+         border-top-left-radius: 0;
+         border-top-right-radius: 0;
+
+     }
+
+     .nav-menu {
+         display: none;
+         position: absolute;
+         right: 0;
+         top: 60px;
+         padding: 20px;
+         margin: 5px;
+         font-size: 15px;
+         background-color: var(--cardColor);
+         border: 1px solid #5c5c5f38;
+         border-radius: 10px;
+         width: 20%;
+
+     }
+
+     .sidebar .nav-info .fa-bars {
+         display: flex;
+     }
+
+     .cards-content .cards {
+         display: grid;
+         grid-template-columns: 2fr 2fr;
+         grid-template-rows: 2fr 2fr;
+     }
+
+
+
+     section {
+         margin: 0;
+         width: 100%;
+
+     }
+
+ }
+
+ @media(max-width:600px) {
+
+     .cards-content .cards {
+         display: flex;
+         flex-direction: column;
+
+     }
+
+     .nav-menu {
+         display: none;
+         position: absolute;
+         right: 0;
+         top: 60px;
+         padding: 20px;
+         margin: 5px;
+         font-size: 15px;
+         background-color: var(--cardColor);
+         border: 1px solid #5c5c5f38;
+         border-radius: 10px;
+         width: 50%;
+
+     }
+ }
+
+ /*.................................  */
